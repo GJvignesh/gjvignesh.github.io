@@ -2,8 +2,7 @@
   "name": "",
   "type": "module",
   "version": "0.5.0",
-  "description": "Pulsar - A fast, modern Astro blog theme with flash-free dark mode, Shiki syntax highlighting, RSS, tag pages, reading time, and comprehensive SEO. Built with Tailwind CSS.",
-  "author": "amirdaraee",
+  "author": "Vignesh GJ",
   "license": "MIT",
   "keywords": [
     "astro",
@@ -23,14 +22,6 @@
     "fast",
     "modern"
   ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/amirdaraee/astro-pulsar"
-  },
-  "bugs": {
-    "url": "https://github.com/amirdaraee/astro-pulsar/issues"
-  },
-  "homepage": "https://github.com/amirdaraee/astro-pulsar#readme",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -44,7 +35,7 @@
     "@astrojs/rss": "^4.0.19",
     "@astrojs/sitemap": "^3.7.3",
     "astro": "^7.0.6",
-    "hast": "^0.0.2",
+    "hast": "^1.0.0",
     "mermaid": "^11.16.0",
     "typescript": "^6.0.3",
     "unist-util-visit": "^5.1.0"

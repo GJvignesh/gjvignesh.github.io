@@ -35,26 +35,26 @@ const structuredData = {
   "@type": "BlogPosting",
   "headline": post.data.title,
   "description": post.data.description,
-  "image": post.data.photo ? `https://amirdaraee.com/${post.data.photo.replace(/\.(png|jpg|jpeg)$/, '.webp')}` : "https://amirdaraee.com/logo.webp",
+  "image": post.data.photo ? `${base}${post.data.photo.replace(/\.(png|jpg|jpeg)$/, '.webp')}` : `${base}logo.webp`,
   "datePublished": post.data.date.toISOString(),
   "dateModified": post.data.date.toISOString(),
   "author": {
     "@type": "Person",
-    "name": post.data.author || "Amir Daraee",
-    "url": "https://amirdaraee.com"
+    "name": post.data.author || "Vignesh GJ",
+    "url": "https://github.com/GJvignesh"
   },
   "publisher": {
     "@type": "Person",
     "name": "Amir Daraee",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://amirdaraee.com/logo.webp"
+      "url": "/logo.webp"
     }
   },
   "keywords": post.data.keywords?.join(', ') || '',
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": `https://amirdaraee.com/blog/${post.id}`
+    "@id": `${base}blog/${post.id}`
   }
 };
 ---
