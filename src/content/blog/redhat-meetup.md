@@ -11,6 +11,8 @@ tags:
   - AI
   - Containers
   - Cloud Computing
+
+photo: "./sample-4.jpg"
 ---
 
 # Red Hat Meetup Unpacked: From Memory Dumps to 500k Daily AI Sandboxes
@@ -188,6 +190,7 @@ It was a fantastic evening of engineering camaraderie. If you get the chance to 
 
 ---
 
+
+
 *Published: July 19, 2026*  
 *Tags: #ConfidentialComputing #AISafety #ZeroTrust #Kubernetes #DevSecOps #CodeRabbit #Blockchain*
-```

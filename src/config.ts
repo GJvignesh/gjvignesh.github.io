@@ -31,7 +31,7 @@ export const SITE_CONFIG = {
 
   // Site URL (used for canonical URLs and SEO)
   // Update this with your production URL
-  siteUrl: "https://amirdaraee.github.io/astro-pulsar",
+  siteUrl: "https://gjvignesh.github.io", // Your custom domain
 
   // Default meta image for social sharing
   // Place your image in the public folder

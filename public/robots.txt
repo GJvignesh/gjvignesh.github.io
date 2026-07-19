@@ -1,6 +1,6 @@
-# robots.txt for amirdaraee.com
+# robots.txt for https://gjvignesh.github.io/
 User-agent: *
 Allow: /
 
 # Sitemaps
-Sitemap: https://amirdaraee.com/sitemap-index.xml
+Sitemap: https://gjvignesh.github.io/about/
