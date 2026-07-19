@@ -1,0 +1,59 @@
+---
+// src/components/Mermaid.astro
+// Renders all code blocks with class "language-mermaid" as Mermaid diagrams.
+// Runs only in the browser – no build‑time overhead.
+---
+<script>
+  import mermaid from 'mermaid';
+
+  mermaid.initialize({
+    startOnLoad: false,
+    theme: 'default',
+    securityLevel: 'loose',
+  });
+
+  async function renderMermaidBlocks() {
+    const blocks = document.querySelectorAll('pre code.language-mermaid');
+    if (blocks.length === 0) return;
+
+    for (const block of blocks) {
+      const code = block.textContent || '';
+      // Create a container for the diagram
+      const container = document.createElement('div');
+      container.className = 'mermaid-container';
+      container.textContent = code;
+      // Replace the <pre> wrapper with the new container
+      block.parentElement?.replaceWith(container);
+    }
+
+    // Render all injected diagrams
+    try {
+      await mermaid.run({
+        querySelector: '.mermaid-container',
+      });
+    } catch (error) {
+      console.error('Mermaid rendering failed:', error);
+      // Optionally show the original code block if rendering fails
+    }
+  }
+
+  // Run on initial page load
+  renderMermaidBlocks();
+
+  // Also run after Astro view transitions (if you're using them)
+  document.addEventListener('astro:page-load', renderMermaidBlocks);
+</script>
+
+<style is:global>
+  /* Ensure Mermaid SVGs are responsive and centered */
+  .mermaid-container {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+    overflow-x: auto;
+  }
+  .mermaid-container svg {
+    max-width: 100%;
+    height: auto;
+  }
+</style>
